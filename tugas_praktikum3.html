@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            flex: 1;
+        }
+
+        nav a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a.home {
+            background-color: aqua; /* Warna aqua untuk HOME */
+            color: #333; /* Warna teks tetap hitam */
+        }
+
+        nav a.home:hover {
+            background-color: #ddd;
+        }
+
+        nav a.active {
+            background-color: darkgrey;
+            color: white;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: rgb(27, 222, 10);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transition: width 0.3s;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="home">HOME</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">PROJECT</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
